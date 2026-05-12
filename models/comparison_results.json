@@ -1,0 +1,46 @@
+{
+  "results": {
+    "Ridge": {
+      "RMSE": 1203.4206757949264,
+      "R2": 0.501960524709674
+    },
+    "Random Forest": {
+      "RMSE": 1089.8367301536953,
+      "R2": 0.5915608411443903
+    },
+    "XGBoost": {
+      "RMSE": 1145.02194035789,
+      "R2": 0.5491425160138477
+    },
+    "LightGBM": {
+      "RMSE": 1120.8112284814401,
+      "R2": 0.5680109182622213
+    }
+  },
+  "features": [
+    "Item_Weight",
+    "Item_Fat_Content",
+    "Item_Visibility",
+    "Item_Type",
+    "Item_MRP",
+    "Outlet_Size",
+    "Outlet_Location_Type",
+    "Outlet_Type",
+    "Item_Category",
+    "Outlet_Age",
+    "Item_Visibility_Ratio",
+    "MRP_Band",
+    "Item_MRP_Log",
+    "Outlet_Type_Encoded"
+  ],
+  "cat_features": [
+    "Item_Fat_Content",
+    "Item_Type",
+    "Item_Category",
+    "MRP_Band",
+    "Outlet_Identifier",
+    "Outlet_Size",
+    "Outlet_Location_Type",
+    "Outlet_Type"
+  ]
+}

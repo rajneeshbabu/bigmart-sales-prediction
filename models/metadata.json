@@ -1,0 +1,57 @@
+{
+  "features": [
+    "Item_Weight",
+    "Item_Fat_Content",
+    "Item_Visibility",
+    "Item_Type",
+    "Item_MRP",
+    "Outlet_Size",
+    "Outlet_Location_Type",
+    "Outlet_Type",
+    "Item_Category",
+    "Outlet_Age",
+    "Item_Visibility_Ratio",
+    "MRP_Band",
+    "Item_MRP_Log",
+    "Outlet_Type_Encoded"
+  ],
+  "cat_features": [
+    "Item_Fat_Content",
+    "Item_Type",
+    "Item_Category",
+    "MRP_Band",
+    "Outlet_Identifier",
+    "Outlet_Size",
+    "Outlet_Location_Type",
+    "Outlet_Type"
+  ],
+  "cv_rmse": 1097.55,
+  "cv_r2": 0.5857,
+  "best_params": {
+    "subsample": 0.7,
+    "reg_lambda": 2.0,
+    "reg_alpha": 0.1,
+    "n_estimators": 600,
+    "max_depth": 4,
+    "learning_rate": 0.03,
+    "colsample_bytree": 0.7
+  },
+  "model_comparison": {
+    "Ridge": {
+      "rmse": 1203.42,
+      "r2": 0.502
+    },
+    "Random Forest": {
+      "rmse": 1089.83,
+      "r2": 0.5916
+    },
+    "XGBoost": {
+      "rmse": 1144.93,
+      "r2": 0.5492
+    },
+    "LightGBM": {
+      "rmse": 1120.81,
+      "r2": 0.568
+    }
+  }
+}
