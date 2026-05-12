@@ -82,7 +82,8 @@ def load_model():
 
 model, encoders, meta = load_model()
 FEATURES     = meta['features']
-CAT_FEATURES = meta['cat_features']
+CAT_FEATURES = ['Item_Fat_Content', 'Item_Type', 'Item_Category', 'MRP_Band',
+                'Outlet_Identifier', 'Outlet_Size', 'Outlet_Location_Type', 'Outlet_Type']
 
 
 # ── Feature engineering (must match training) ──────────────────────────────────
@@ -114,25 +115,27 @@ def engineer_single(row: dict) -> dict:
     outlet_type_enc = ot_enc.get(row['Outlet_Type'], 1)
 
     vis = row['Item_Visibility'] if row['Item_Visibility'] > 0 else 0.06
-    vis_ratio = vis / 0.06  # approximate mean visibility
+    vis_ratio = vis / 0.06  # approximate mean outlet visibility
 
     outlet_size = row.get('Outlet_Size', 'Small') or 'Small'
 
     return {
-        'Item_Weight':           row['Item_Weight'],
-        'Item_Fat_Content':      fc,
-        'Item_Visibility':       vis,
-        'Item_Type':             row['Item_Type'],
-        'Item_MRP':              mrp,
-        'Outlet_Size':           outlet_size,
-        'Outlet_Location_Type':  row['Outlet_Location_Type'],
-        'Outlet_Type':           row['Outlet_Type'],
-        'Item_Category':         item_cat,
-        'Outlet_Age':            outlet_age,
-        'Item_Visibility_Ratio': vis_ratio,
-        'MRP_Band':              mrp_band,
-        'Item_MRP_Log':          mrp_log,
-        'Outlet_Type_Encoded':   outlet_type_enc,
+        'Item_Weight':          row['Item_Weight'],
+        'Item_Fat_Content':     fc,
+        'Item_Visibility':      vis,
+        'Item_Type':            row['Item_Type'],
+        'Item_MRP':             mrp,
+        'Outlet_Size':          outlet_size,
+        'Outlet_Location_Type': row['Outlet_Location_Type'],
+        'Outlet_Type':          row['Outlet_Type'],
+        'Item_Category':        item_cat,
+        'Outlet_Age':           outlet_age,
+        'Vis_Ratio':            vis_ratio,
+        'MRP_Band':             mrp_band,
+        'Item_MRP_Log':         mrp_log,
+        'Item_MRP_Sq':          mrp ** 2,
+        'Outlet_Type_Encoded':  outlet_type_enc,
+        'MRP_x_Outlet':         mrp * outlet_type_enc,
     }
 
 
