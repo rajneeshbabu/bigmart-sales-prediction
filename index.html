@@ -152,11 +152,11 @@
 </header>
 
 <div class="stats-row">
-  <div class="stat-card"><div class="val">₹1,094</div><div class="lbl">CV RMSE</div></div>
-  <div class="stat-card"><div class="val">0.589</div><div class="lbl">CV R²</div></div>
-  <div class="stat-card"><div class="val">Random Forest</div><div class="lbl">Best Model</div></div>
+  <div class="stat-card"><div class="val">₹1,098</div><div class="lbl">CV RMSE</div></div>
+  <div class="stat-card"><div class="val">0.586</div><div class="lbl">CV R²</div></div>
+  <div class="stat-card"><div class="val">RF + Blend</div><div class="lbl">Best Model</div></div>
   <div class="stat-card"><div class="val">8,523</div><div class="lbl">Training Samples</div></div>
-  <div class="stat-card"><div class="val">14 Features</div><div class="lbl">After Engineering</div></div>
+  <div class="stat-card"><div class="val">16 Features</div><div class="lbl">After Engineering</div></div>
 </div>
 
 <hr />
@@ -286,10 +286,11 @@
     <table>
       <thead><tr><th>Model</th><th>RMSE</th><th>R²</th><th></th></tr></thead>
       <tbody>
-        <tr><td>Ridge</td><td>₹1,203</td><td>0.502</td><td></td></tr>
-        <tr><td>XGBoost</td><td>₹1,145</td><td>0.549</td><td></td></tr>
-        <tr><td>LightGBM</td><td>₹1,121</td><td>0.568</td><td></td></tr>
-        <tr class="winner"><td>Random Forest ✅</td><td>₹1,094</td><td>0.589</td><td>Best</td></tr>
+        <tr><td>Ridge (baseline)</td><td>₹1,203</td><td>0.502</td><td></td></tr>
+        <tr><td>XGBoost</td><td>₹1,143</td><td>0.551</td><td></td></tr>
+        <tr><td>LightGBM</td><td>₹1,147</td><td>0.548</td><td></td></tr>
+        <tr><td>Random Forest</td><td>₹1,097</td><td>0.586</td><td></td></tr>
+        <tr class="winner"><td>Blend (RF+XGB+LGB) ✅</td><td>₹1,098</td><td>0.586</td><td>Best</td></tr>
       </tbody>
     </table>
   </div>

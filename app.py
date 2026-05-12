@@ -275,8 +275,8 @@ st.markdown("<div class='section-title'>📊 Model Benchmark (5-fold CV)</div>",
 
 comp = meta['model_comparison']
 comp_df = pd.DataFrame([
-    {"Model": k, "RMSE": f"₹{v['rmse']:,.0f}", "R²": f"{v['r2']:.3f}",
-     "Winner": "✅" if k == "Random Forest" else ""}
+    {"Model": k, "RMSE": f"₹{v['RMSE']:,.0f}", "R²": f"{v['R2']:.3f}",
+     "Winner": "✅" if k == "Blend (final)" else ""}
     for k, v in comp.items()
 ])
 st.dataframe(comp_df, use_container_width=True, hide_index=True)
