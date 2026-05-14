@@ -4,12 +4,12 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-RandomForest-orange)](https://scikit-learn.org)
 [![XGBoost](https://img.shields.io/badge/XGBoost-2.0%2B-red)](https://xgboost.readthedocs.io)
 [![LightGBM](https://img.shields.io/badge/LightGBM-4.0%2B-brightgreen)](https://lightgbm.readthedocs.io)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-blueviolet)](https://rajneeshbabu.github.io/bigmart-sales-prediction)
+[![Project Page](https://img.shields.io/badge/Project%20Page-GitHub%20Pages-222?logo=github)](https://rajneeshbabu.github.io/bigmart-sales-prediction/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 Predict item-level outlet sales across 10 Big Mart stores using machine learning. Built with comprehensive feature engineering, a 4-model benchmark, and a live web demo.
 
-**Live Demo**: [rajneeshbabu.github.io/bigmart-sales-prediction](https://rajneeshbabu.github.io/bigmart-sales-prediction)
+🌐 **[View Project Page →](https://rajneeshbabu.github.io/bigmart-sales-prediction/)**
 
 ---
 
